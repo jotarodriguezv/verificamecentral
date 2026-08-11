@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eliminación de datos — Verifícame</title>
+<meta name="description" content="Instrucciones para solicitar la eliminación de datos personales tratados por Verifícame.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="/" class="wordmark">Verifícame <span class="mark">✓</span></a>
+  <nav>
+    <a href="/terminos">Términos</a>
+    <a href="/privacidad">Privacidad</a>
+    <a href="/eliminacion-datos" aria-current="page">Eliminación de datos</a>
+  </nav>
+</header>
+
+<main class="doc">
+  <div class="doc-meta">
+    <span>Documento legal</span>
+    <span>·</span>
+    <span>Vigente desde <span class="fill">[FECHA]</span></span>
+    <span>·</span>
+    <span>Versión 1.0</span>
+  </div>
+
+  <h1>Instrucciones para la eliminación de datos</h1>
+  <p class="lede">
+    Esta página explica cómo puede solicitar la eliminación de los datos personales que Verifícame haya
+    tratado sobre usted, ya sea como cliente directo o como usuario final de un negocio que usa nuestra
+    infraestructura de automatización por WhatsApp.
+  </p>
+
+  <div class="clause">
+    <div class="idx mono">01</div>
+    <div>
+      <h2>¿Quién puede solicitar la eliminación?</h2>
+      <p>
+        Cualquier persona cuyos datos hayan sido tratados por Verifícame: el dueño de un negocio cliente
+        (por ejemplo, un restaurante que usa VFoodie o VMenus), o un cliente final que haya interactuado por
+        WhatsApp con un negocio que opera sobre nuestra infraestructura.
+      </p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="idx mono">02</div>
+    <div>
+      <h2>Cómo solicitarla</h2>
+      <p>Envíe un correo a <span class="fill">[correo@verificame.co]</span> con el asunto
+        <strong>"Eliminación de datos"</strong>, indicando:</p>
+      <ul>
+        <li>Su nombre completo.</li>
+        <li>El número de WhatsApp desde el cual interactuó con el servicio.</li>
+        <li>El negocio con el que interactuó (si aplica), por ejemplo el nombre del restaurante.</li>
+        <li>Una breve descripción de su solicitud.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="idx mono">03</div>
+    <div>
+      <h2>Qué pasa después</h2>
+      <p>
+        Verificamos la solicitud para confirmar que proviene del titular de los datos y, cuando corresponde,
+        la validamos con el negocio cliente involucrado (ya que en muchos casos ese negocio es el responsable
+        del tratamiento y Verifícame actúa únicamente como encargado técnico, ver nuestra
+        <a href="/privacidad">política de privacidad</a>). Una vez confirmada, eliminamos los datos personales
+        de nuestros sistemas dentro de un plazo razonable, salvo que exista una obligación legal o contractual
+        que exija conservarlos por más tiempo.
+      </p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="idx mono">04</div>
+    <div>
+      <h2>Qué datos se eliminan</h2>
+      <ul>
+        <li>Historial de conversación asociado a su número de WhatsApp dentro de nuestra infraestructura.</li>
+        <li>Datos de contacto y pedidos almacenados en nuestros sistemas (por ejemplo, en VFoodie).</li>
+        <li>Cualquier otro dato personal que hayamos tratado directamente como responsables.</li>
+      </ul>
+      <p>
+        No podemos eliminar datos que WhatsApp / Meta Platforms, Inc. conserve conforme a sus propias
+        políticas, ya que Verifícame no tiene control sobre esos sistemas.
+      </p>
+    </div>
+  </div>
+
+  <div class="clause">
+    <div class="idx mono">05</div>
+    <div>
+      <h2>Confirmación</h2>
+      <p>
+        Una vez completada la eliminación, le enviaremos una confirmación al mismo correo o número desde el
+        que se realizó la solicitud.
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="in">
+    <span>© <span id="year"></span> Verifícame</span>
+    <span class="mono"><a href="/terminos">Términos</a> · <a href="/privacidad">Privacidad</a> · <a href="mailto:contacto@verificame.co">contacto@verificame.co</a></span>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
