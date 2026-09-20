@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conecta tu WhatsApp — Verifícame</title>
+<meta name="description" content="Conecta el WhatsApp de tu negocio con Verifícame. Autorizas una sola vez desde Meta y tu número queda listo para responder solo.">
+<!-- Página operativa: se le pasa al cliente por enlace directo, no se busca. -->
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="/" class="wordmark">Verifícame <span class="mark">✓</span></a>
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/terminos">Términos</a>
+    <a href="/privacidad">Privacidad</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <span class="badge">✓ Tech Provider verificado — WhatsApp Business Platform</span>
+  <h1>Conecta tu WhatsApp</h1>
+  <p class="lede">
+    Autorizas una sola vez desde Meta y tu número queda listo para responder solo.
+    Tu conversación sigue siendo tuya: nosotros solo ponemos la automatización encima.
+  </p>
+</section>
+
+<main class="conectar">
+
+  <div>
+    <h2>¿Qué número vas a conectar?</h2>
+
+    <fieldset class="opciones">
+      <legend class="sr-only">Tipo de conexión</legend>
+
+      <label class="opcion">
+        <input type="radio" name="flujo" value="coexistencia" checked>
+        <strong>El que ya uso en WhatsApp Business</strong>
+        <span>
+          Sigues atendiendo desde tu teléfono como siempre, y encima corre la
+          automatización. No pierdes tus chats ni tienes que avisar a nadie de
+          un número nuevo.
+        </span>
+        <span class="requisito">Requiere WhatsApp Business 2.24.17 o superior</span>
+      </label>
+
+      <label class="opcion">
+        <input type="radio" name="flujo" value="nuevo">
+        <strong>Un número nuevo, solo para automatización</strong>
+        <span>
+          Una línea aparte que no usas en tu teléfono. Útil si quieres separar
+          la atención automática de tu WhatsApp del día a día.
+        </span>
+      </label>
+    </fieldset>
+
+    <h2>Lo que te va a pedir Meta</h2>
+
+    <div class="process-list" id="pasos-coexistencia">
+      <div class="process-step">
+        <span class="num">1</span>
+        <div>
+          <h4>Ten a mano el teléfono con tu WhatsApp Business</h4>
+          <p>Vas a necesitarlo para escanear un código. Si hace tiempo que no actualizas la app, actualízala antes de empezar.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="num">2</span>
+        <div>
+          <h4>Inicia sesión con Facebook</h4>
+          <p>Con la cuenta personal del dueño o administrador del negocio. No se publica nada en tu perfil.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="num">3</span>
+        <div>
+          <h4>Elige o crea el portafolio del negocio</h4>
+          <p>Si nunca has usado Meta Business, aquí lo creas. Es gratis y toma un minuto.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="num">4</span>
+        <div>
+          <h4>Escanea el código desde tu WhatsApp Business</h4>
+          <p>Igual que cuando entras a WhatsApp Web. Así queda conectado el número sin dejar de funcionar en tu teléfono.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="num">5</span>
+        <div>
+          <h4>Confirma los permisos</h4>
+          <p>Verás exactamente a qué damos acceso: enviar mensajes y administrar plantillas. Nada más.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-list" id="pasos-nuevo" hidden>
+      <div class="process-step">
+        <span class="num">1</span>
+        <div>
+          <h4>Inicia sesión con Facebook</h4>
+          <p>Con la cuenta personal del dueño o administrador del negocio. No se publica nada en tu perfil.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="num">2</span>
+        <div>
+          <h4>Elige o crea el portafolio del negocio</h4>
+          <p>Si nunca has usado Meta Business, aquí lo creas. Es gratis y toma un minuto.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="num">3</span>
+        <div>
+          <h4>Registra el número</h4>
+          <p>Uno que no esté en uso en WhatsApp ni en WhatsApp Business. Meta lo verifica con un código por SMS o llamada.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <span class="num">4</span>
+        <div>
+          <h4>Confirma los permisos</h4>
+          <p>Verás exactamente a qué damos acceso: enviar mensajes y administrar plantillas. Nada más.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="nota-lateral">
+      <p>El proceso toma entre cinco y diez minutos. Si algo se interrumpe, puedes volver a empezar desde esta misma página sin perder nada.</p>
+      <p>¿Prefieres que te acompañemos mientras lo haces? Escríbenos y lo hacemos juntos por videollamada.</p>
+    </div>
+  </div>
+
+  <aside class="panel" id="panel" data-estado="inicio">
+    <div class="dial">
+      <span class="dot" aria-hidden="true"></span>
+      <span id="dial">Sin conectar</span>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="boton" disabled>Preparando…</button>
+
+    <p class="letra-chica">Se abre una ventana de Meta. Mantén esta pestaña abierta hasta terminar.</p>
+
+    <p class="aviso" id="aviso" role="status" aria-live="polite"></p>
+
+    <div class="resultado" id="resultado" hidden>
+      <dl>
+        <dt>Cuenta de WhatsApp Business</dt>
+        <dd id="waba">—</dd>
+        <dt>Número</dt>
+        <dd id="numero">—</dd>
+      </dl>
+    </div>
+  </aside>
+
+</main>
+
+<footer class="site-footer">
+  <div class="in">
+    <span>© <span id="year"></span> Verifícame</span>
+    <span class="mono"><a href="/terminos">Términos</a> · <a href="/privacidad">Privacidad</a> · <a href="/eliminacion-datos">Eliminación de datos</a></span>
+  </div>
+</footer>
+
+<noscript>
+  <p class="nota-sin-js">
+    Esta página necesita JavaScript para abrir el registro de Meta. Actívalo y recarga, o escríbenos y lo hacemos juntos.
+  </p>
+</noscript>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ── CONFIGURACIÓN ──────────────────────────────────────────────── */
+
+const ID_APP    = '1113254291028963';
+const ID_CONFIG = '1613100413530994';
+const VERSION   = 'v26.0';
+
+// Canjea el código por un token permanente. Tiene que ser un servidor: el App
+// Secret nunca puede viajar al navegador. Además el código es de un solo uso y
+// caduca en segundos, así que el canje debe ser lo primero que haga n8n.
+const URL_BACKEND = 'https://n8n.verificame.co/webhook/onboarding-whatsapp';
+
+// Meta solo muestra la pantalla de "conecta el número que ya usas" si se pide
+// este featureType. Sin él el flujo pide un número nuevo aunque el cliente haya
+// elegido coexistencia, y el fallo no se nota hasta que ya está dentro del
+// registro de Meta.
+const FEATURE_COEXISTENCIA = 'whatsapp_business_app_onboarding';
+
+// Los mensajes del registro llegan por postMessage. Se compara el origen
+// completo y no con endsWith, porque 'https://falsofacebook.com' también
+// termina en facebook.com.
+const ORIGENES_META = [
+  'https://www.facebook.com',
+  'https://web.facebook.com',
+  'https://facebook.com'
+];
+
+/* ── ESTADO ─────────────────────────────────────────────────────── */
+
+const panel     = document.getElementById('panel');
+const dial      = document.getElementById('dial');
+const boton     = document.getElementById('boton');
+const aviso     = document.getElementById('aviso');
+const resultado = document.getElementById('resultado');
+
+let datosRegistro = null;   // { waba_id, phone_number_id? }
+let codigo        = null;
+let rescate       = null;
+let enviado       = false;
+
+function flujoElegido() {
+  return document.querySelector('input[name="flujo"]:checked').value;
+}
+
+function estado(nombre, texto) {
+  panel.dataset.estado = nombre;
+  dial.textContent = texto;
+}
+
+function avisar(tipo, texto) {
+  aviso.className = 'aviso ' + tipo;
+  aviso.textContent = texto;
+}
+
+function limpiarAviso() {
+  aviso.className = 'aviso';
+  aviso.textContent = '';
+}
+
+function permitirReintento(etiqueta) {
+  boton.disabled = false;
+  boton.textContent = etiqueta;
+}
+
+/* ── ELECCIÓN DE FLUJO ──────────────────────────────────────────── */
+
+document.querySelectorAll('input[name="flujo"]').forEach(function (radio) {
+  radio.addEventListener('change', function () {
+    var coexiste = flujoElegido() === 'coexistencia';
+    document.getElementById('pasos-coexistencia').hidden = !coexiste;
+    document.getElementById('pasos-nuevo').hidden = coexiste;
+  });
+});
+
+/* ── SDK DE META ────────────────────────────────────────────────── */
+
+window.fbAsyncInit = function () {
+  FB.init({ appId: ID_APP, cookie: true, xfbml: false, version: VERSION });
+  permitirReintento('Conectar mi WhatsApp');
+};
+
+(function (d, s, id) {
+  var js, primero = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = 'https://connect.facebook.net/es_LA/sdk.js';
+  primero.parentNode.insertBefore(js, primero);
+}(document, 'script', 'facebook-jssdk'));
+
+// Sin esto, cuando connect.facebook.net no carga —bloqueador de rastreadores,
+// red corporativa, extensión de privacidad— el botón se queda en "Preparando…"
+// para siempre y el cliente no tiene forma de saber qué pasó.
+setTimeout(function () {
+  if (window.FB) return;
+  boton.textContent = 'No se pudo cargar Meta';
+  avisar('mal', 'No cargó el conector de Meta. Casi siempre es un bloqueador de rastreadores o la red: desactívalo para esta página y recárgala, o escríbenos y lo hacemos juntos.');
+}, 8000);
+
+/* ── MENSAJES DEL REGISTRO ──────────────────────────────────────── */
+
+window.addEventListener('message', function (evento) {
+  if (ORIGENES_META.indexOf(evento.origin) === -1) return;
+
+  var datos = evento.data;
+  if (typeof datos === 'string') {
+    try { datos = JSON.parse(datos); } catch (e) { return; }
+  }
+  if (!datos || datos.type !== 'WA_EMBEDDED_SIGNUP') return;
+
+  switch (datos.event) {
+    // Tres finales distintos según el flujo. El de coexistencia es
+    // FINISH_WHATSAPP_BUSINESS_APP_ONBOARDING y su payload no trae
+    // phone_number_id: el número llega después por webhook.
+    case 'FINISH':
+    case 'FINISH_ONLY_WABA':
+    case 'FINISH_WHATSAPP_BUSINESS_APP_ONBOARDING':
+      datosRegistro = datos.data || {};
+      programarRescate();
+      enviar();
+      break;
+
+    // Meta no emite un evento ERROR: los fallos llegan como CANCEL con
+    // error_message. Distinguirlos importa, porque decirle "cerraste la
+    // ventana" a quien tuvo un error lo manda a buscar el problema donde no está.
+    case 'CANCEL':
+      var motivo = datos.data && datos.data.error_message;
+      estado(motivo ? 'fallo' : 'inicio', motivo ? 'No se pudo conectar' : 'Sin conectar');
+      permitirReintento('Conectar mi WhatsApp');
+      avisar('mal', motivo || 'Cerraste la ventana antes de terminar. Puedes intentarlo otra vez cuando quieras.');
+      break;
+  }
+});
+
+/* ── RESPUESTA DE FB.login ──────────────────────────────────────── */
+
+function respuestaLogin(respuesta) {
+  if (respuesta && respuesta.authResponse && respuesta.authResponse.code) {
+    codigo = respuesta.authResponse.code;
+    programarRescate();
+    enviar();
+    return;
+  }
+  // Sin código no hay nada que canjear. Si el registro ya terminó, del aviso se
+  // encarga el rescate; si no, es que simplemente cerró la ventana.
+  if (!datosRegistro) {
+    estado('inicio', 'Sin conectar');
+    permitirReintento('Conectar mi WhatsApp');
+  }
+}
+
+/* ── ENVÍO AL BACKEND ───────────────────────────────────────────── */
+
+// El código y los datos del registro llegan por caminos distintos y sin orden
+// garantizado, así que solo se envía cuando ya están los dos.
+function enviar() {
+  if (!codigo || !datosRegistro || enviado) return;
+
+  clearTimeout(rescate);
+  enviado = true;
+  estado('trabajando', 'Terminando la conexión…');
+
+  fetch(URL_BACKEND, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      code: codigo,
+      waba_id: datosRegistro.waba_id || null,
+      phone_number_id: datosRegistro.phone_number_id || null,
+      flujo: flujoElegido()
+    })
+  })
+    .then(function (r) {
+      if (!r.ok) throw new Error('backend');
+    })
+    .then(function () {
+      estado('listo', 'Conectado');
+      boton.textContent = 'Listo';
+      avisar('bien', 'Tu número quedó conectado. Ya puedes cerrar esta página.');
+      document.getElementById('waba').textContent = datosRegistro.waba_id || '—';
+      document.getElementById('numero').textContent =
+        datosRegistro.phone_number_id || 'Se sincroniza en unos minutos';
+      resultado.hidden = false;
+    })
+    .catch(function () {
+      enviado = false;
+      estado('fallo', 'Falta un paso');
+      permitirReintento('Reintentar');
+      avisar('mal', 'Autorizaste correctamente, pero no pudimos guardar la conexión. Escríbenos y lo terminamos nosotros: no hace falta que repitas nada en Meta.');
+    });
+}
+
+// Si una de las dos piezas no llega nunca, el panel se quedaría en "esperando"
+// con el botón desactivado y sin salida. Este temporizador es esa salida.
+function programarRescate() {
+  clearTimeout(rescate);
+  if (codigo && datosRegistro) return;
+  rescate = setTimeout(function () {
+    if (codigo && datosRegistro) return;
+    estado('fallo', 'Quedó a medias');
+    permitirReintento('Reintentar');
+    avisar('mal', 'La autorización quedó a medias y no pudimos terminarla. Vuelve a intentarlo; si se repite, escríbenos.');
+  }, 90000);
+}
+
+/* ── LANZAR EL FLUJO ────────────────────────────────────────────── */
+
+boton.addEventListener('click', function () {
+  limpiarAviso();
+  resultado.hidden = true;
+  datosRegistro = null;
+  codigo = null;
+  enviado = false;
+  clearTimeout(rescate);
+
+  boton.disabled = true;
+  estado('trabajando', 'Esperando autorización en Meta…');
+
+  var extras = {
+    setup: {},
+    sessionInfoVersion: '3'
+  };
+  if (flujoElegido() === 'coexistencia') {
+    extras.featureType = FEATURE_COEXISTENCIA;
+  }
+
+  FB.login(respuestaLogin, {
+    config_id: ID_CONFIG,
+    response_type: 'code',
+    override_default_response_type: true,
+    extras: extras
+  });
+});
+</script>
+
+</body>
+</html>
