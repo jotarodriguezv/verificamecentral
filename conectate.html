@@ -6,7 +6,7 @@
 <title>Conecta tu WhatsApp — Verifícame</title>
 <meta name="description" content="Conecta el WhatsApp de tu negocio con Verifícame. Autorizas una sola vez desde Meta y tu número queda listo para responder solo.">
 <!-- Página operativa: se le pasa al cliente por enlace directo, no se busca. -->
-<meta name="robots" content="noindex, follow">
+<meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -27,106 +27,59 @@
   <span class="badge">✓ Tech Provider verificado — WhatsApp Business Platform</span>
   <h1>Conecta tu WhatsApp</h1>
   <p class="lede">
-    Autorizas una sola vez desde Meta y tu número queda listo para responder solo.
-    Tu conversación sigue siendo tuya: nosotros solo ponemos la automatización encima.
+    Tu número sigue siendo el mismo y no pierdes tus chats. Autorizas una vez
+    desde Meta y queda listo para responder solo. Tu conversación sigue siendo
+    tuya: nosotros solo ponemos la automatización encima.
   </p>
 </section>
 
 <main class="conectar">
 
   <div>
-    <h2>¿Qué número vas a conectar?</h2>
+    <div class="antes-de-empezar">
+      <strong>Antes de empezar, tres cosas</strong>
+      <ul>
+        <li>Ten el <strong>teléfono a mano</strong>: el código de verificación te llega por WhatsApp, no por SMS.</li>
+        <li>Actualiza <strong>WhatsApp Business</strong> a la versión 2.24.17 o posterior.</li>
+        <li>Si usas <strong>WhatsApp Web</strong> u otro dispositivo vinculado, se va a desconectar. Lo vuelves a vincular después, pero no te pille por sorpresa.</li>
+      </ul>
+    </div>
 
-    <fieldset class="opciones">
-      <legend class="sr-only">Tipo de conexión</legend>
+    <h2>Lo que va a pasar</h2>
 
-      <label class="opcion">
-        <input type="radio" name="flujo" value="coexistencia" checked>
-        <strong>El que ya uso en WhatsApp Business</strong>
-        <span>
-          Sigues atendiendo desde tu teléfono como siempre, y encima corre la
-          automatización. No pierdes tus chats ni tienes que avisar a nadie de
-          un número nuevo.
-        </span>
-        <span class="requisito">Requiere WhatsApp Business 2.24.17 o superior</span>
-      </label>
-
-      <label class="opcion">
-        <input type="radio" name="flujo" value="nuevo">
-        <strong>Un número nuevo, solo para automatización</strong>
-        <span>
-          Una línea aparte que no usas en tu teléfono. Útil si quieres separar
-          la atención automática de tu WhatsApp del día a día.
-        </span>
-      </label>
-    </fieldset>
-
-    <h2>Lo que te va a pedir Meta</h2>
-
-    <div class="process-list" id="pasos-coexistencia">
+    <div class="process-list">
       <div class="process-step">
         <span class="num">1</span>
         <div>
-          <h4>Ten a mano el teléfono con tu WhatsApp Business</h4>
-          <p>Vas a necesitarlo para escanear un código. Si hace tiempo que no actualizas la app, actualízala antes de empezar.</p>
+          <h4>Inicias sesión con Facebook</h4>
+          <p>Con la cuenta personal del dueño o administrador del negocio. No se publica nada en tu perfil.</p>
         </div>
       </div>
       <div class="process-step">
         <span class="num">2</span>
         <div>
-          <h4>Inicia sesión con Facebook</h4>
-          <p>Con la cuenta personal del dueño o administrador del negocio. No se publica nada en tu perfil.</p>
+          <h4>Eliges o creas el portafolio del negocio</h4>
+          <p>Si nunca has usado Meta Business, aquí lo creas. Es gratis y toma un minuto.</p>
         </div>
       </div>
       <div class="process-step">
         <span class="num">3</span>
         <div>
-          <h4>Elige o crea el portafolio del negocio</h4>
-          <p>Si nunca has usado Meta Business, aquí lo creas. Es gratis y toma un minuto.</p>
+          <h4>Indicas tu número</h4>
+          <p>El que ya usas en WhatsApp Business. Meta te manda un código de verificación por WhatsApp, de la cuenta oficial de Facebook Business.</p>
         </div>
       </div>
       <div class="process-step">
         <span class="num">4</span>
         <div>
-          <h4>Escanea el código desde tu WhatsApp Business</h4>
-          <p>Igual que cuando entras a WhatsApp Web. Así queda conectado el número sin dejar de funcionar en tu teléfono.</p>
+          <h4>Confirmas desde la app y pegas el código</h4>
+          <p>En tu WhatsApp Business aparece «Conectar con la Business Platform». Aceptas compartir el historial y escribes el código. Deja la app abierta mientras sincroniza.</p>
         </div>
       </div>
       <div class="process-step">
         <span class="num">5</span>
         <div>
-          <h4>Confirma los permisos</h4>
-          <p>Verás exactamente a qué damos acceso: enviar mensajes y administrar plantillas. Nada más.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="process-list" id="pasos-nuevo" hidden>
-      <div class="process-step">
-        <span class="num">1</span>
-        <div>
-          <h4>Inicia sesión con Facebook</h4>
-          <p>Con la cuenta personal del dueño o administrador del negocio. No se publica nada en tu perfil.</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <span class="num">2</span>
-        <div>
-          <h4>Elige o crea el portafolio del negocio</h4>
-          <p>Si nunca has usado Meta Business, aquí lo creas. Es gratis y toma un minuto.</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <span class="num">3</span>
-        <div>
-          <h4>Registra el número</h4>
-          <p>Uno que no esté en uso en WhatsApp ni en WhatsApp Business. Meta lo verifica con un código por SMS o llamada.</p>
-        </div>
-      </div>
-      <div class="process-step">
-        <span class="num">4</span>
-        <div>
-          <h4>Confirma los permisos</h4>
+          <h4>Confirmas los permisos</h4>
           <p>Verás exactamente a qué damos acceso: enviar mensajes y administrar plantillas. Nada más.</p>
         </div>
       </div>
@@ -134,6 +87,7 @@
 
     <div class="nota-lateral">
       <p>El proceso toma entre cinco y diez minutos. Si algo se interrumpe, puedes volver a empezar desde esta misma página sin perder nada.</p>
+      <p><strong>Después no desinstales la app ni des de baja el número</strong>: la conexión depende de que siga ahí.</p>
       <p>¿Prefieres que te acompañemos mientras lo haces? Escríbenos y lo hacemos juntos por videollamada.</p>
     </div>
   </div>
@@ -189,20 +143,33 @@ const VERSION   = 'v26.0';
 // caduca en segundos, así que el canje debe ser lo primero que haga n8n.
 const URL_BACKEND = 'https://n8n.verificame.co/webhook/onboarding-whatsapp';
 
-// Meta solo muestra la pantalla de "conecta el número que ya usas" si se pide
-// este featureType. Sin él el flujo pide un número nuevo aunque el cliente haya
-// elegido coexistencia, y el fallo no se nota hasta que ya está dentro del
-// registro de Meta.
-const FEATURE_COEXISTENCIA = 'whatsapp_business_app_onboarding';
+// Un solo flujo: el número que el cliente ya usa en WhatsApp Business. Meta
+// solo muestra esa pantalla si se pide este featureType; sin él pediría un
+// número nuevo, y el fallo no se nota hasta que el cliente ya está dentro.
+const FEATURE = 'whatsapp_business_app_onboarding';
 
-// Los mensajes del registro llegan por postMessage. Se compara el origen
-// completo y no con endsWith, porque 'https://falsofacebook.com' también
-// termina en facebook.com.
+// Token por cliente: /conectate?i=xxxx. Permite saber en n8n de quién es la
+// conexión sin preguntárselo al cliente, que no sabría qué contestar.
+const INVITACION = new URLSearchParams(location.search).get('i') || null;
+
+// Origen completo, no sufijo: endsWith('facebook.com') aceptaría
+// 'https://falsofacebook.com'.
 const ORIGENES_META = [
   'https://www.facebook.com',
   'https://web.facebook.com',
   'https://facebook.com'
 ];
+
+// Meta tiene varios finales según por dónde salga el cliente dentro de su
+// propio flujo, y no controlamos cuál recorre. Se aceptan todos.
+const EVENTOS_FIN = [
+  'FINISH',
+  'FINISH_ONLY_WABA',
+  'FINISH_WHATSAPP_BUSINESS_APP_ONBOARDING'
+];
+
+const ESPERA_MAX = 90000;   // salida del estado colgado
+const ESPERA_SDK = 12000;   // el SDK no carga
 
 /* ── ESTADO ─────────────────────────────────────────────────────── */
 
@@ -214,12 +181,8 @@ const resultado = document.getElementById('resultado');
 
 let datosRegistro = null;   // { waba_id, phone_number_id? }
 let codigo        = null;
-let rescate       = null;
 let enviado       = false;
-
-function flujoElegido() {
-  return document.querySelector('input[name="flujo"]:checked').value;
-}
+let reloj         = null;
 
 function estado(nombre, texto) {
   panel.dataset.estado = nombre;
@@ -236,26 +199,17 @@ function limpiarAviso() {
   aviso.textContent = '';
 }
 
-function permitirReintento(etiqueta) {
+function liberar(etiqueta) {
+  clearTimeout(reloj);
   boton.disabled = false;
-  boton.textContent = etiqueta;
+  if (etiqueta) boton.textContent = etiqueta;
 }
-
-/* ── ELECCIÓN DE FLUJO ──────────────────────────────────────────── */
-
-document.querySelectorAll('input[name="flujo"]').forEach(function (radio) {
-  radio.addEventListener('change', function () {
-    var coexiste = flujoElegido() === 'coexistencia';
-    document.getElementById('pasos-coexistencia').hidden = !coexiste;
-    document.getElementById('pasos-nuevo').hidden = coexiste;
-  });
-});
 
 /* ── SDK DE META ────────────────────────────────────────────────── */
 
 window.fbAsyncInit = function () {
   FB.init({ appId: ID_APP, cookie: true, xfbml: false, version: VERSION });
-  permitirReintento('Conectar mi WhatsApp');
+  liberar('Conectar mi WhatsApp');
 };
 
 (function (d, s, id) {
@@ -264,17 +218,20 @@ window.fbAsyncInit = function () {
   js = d.createElement(s);
   js.id = id;
   js.src = 'https://connect.facebook.net/es_LA/sdk.js';
+  js.onerror = sdkNoCarga;
   primero.parentNode.insertBefore(js, primero);
 }(document, 'script', 'facebook-jssdk'));
 
-// Sin esto, cuando connect.facebook.net no carga —bloqueador de rastreadores,
-// red corporativa, extensión de privacidad— el botón se queda en "Preparando…"
-// para siempre y el cliente no tiene forma de saber qué pasó.
-setTimeout(function () {
+// Cuando connect.facebook.net no carga —bloqueador de rastreadores, red
+// corporativa, extensión de privacidad— el botón se quedaría en «Preparando…»
+// para siempre y el cliente no tendría forma de saber qué pasó. El onerror no
+// siempre dispara (a veces el script se sirve vacío), de ahí también el plazo.
+function sdkNoCarga() {
   if (window.FB) return;
   boton.textContent = 'No se pudo cargar Meta';
-  avisar('mal', 'No cargó el conector de Meta. Casi siempre es un bloqueador de rastreadores o la red: desactívalo para esta página y recárgala, o escríbenos y lo hacemos juntos.');
-}, 8000);
+  avisar('mal', 'No cargó el conector de Meta. Casi siempre es un bloqueador de rastreadores, una extensión de privacidad o la red de la oficina. Prueba en otro navegador, o escríbenos y lo hacemos juntos.');
+}
+setTimeout(sdkNoCarga, ESPERA_SDK);
 
 /* ── MENSAJES DEL REGISTRO ──────────────────────────────────────── */
 
@@ -287,27 +244,28 @@ window.addEventListener('message', function (evento) {
   }
   if (!datos || datos.type !== 'WA_EMBEDDED_SIGNUP') return;
 
-  switch (datos.event) {
-    // Tres finales distintos según el flujo. El de coexistencia es
-    // FINISH_WHATSAPP_BUSINESS_APP_ONBOARDING y su payload no trae
-    // phone_number_id: el número llega después por webhook.
-    case 'FINISH':
-    case 'FINISH_ONLY_WABA':
-    case 'FINISH_WHATSAPP_BUSINESS_APP_ONBOARDING':
-      datosRegistro = datos.data || {};
-      programarRescate();
-      enviar();
-      break;
+  if (EVENTOS_FIN.indexOf(datos.event) !== -1) {
+    // En coexistencia el payload no trae phone_number_id: el número se
+    // sincroniza después y el backend lo resuelve desde la WABA.
+    datosRegistro = datos.data || {};
+    enviar();
+    return;
+  }
 
-    // Meta no emite un evento ERROR: los fallos llegan como CANCEL con
-    // error_message. Distinguirlos importa, porque decirle "cerraste la
-    // ventana" a quien tuvo un error lo manda a buscar el problema donde no está.
-    case 'CANCEL':
-      var motivo = datos.data && datos.data.error_message;
-      estado(motivo ? 'fallo' : 'inicio', motivo ? 'No se pudo conectar' : 'Sin conectar');
-      permitirReintento('Conectar mi WhatsApp');
-      avisar('mal', motivo || 'Cerraste la ventana antes de terminar. Puedes intentarlo otra vez cuando quieras.');
-      break;
+  // Meta no emite un evento ERROR: los fallos llegan como CANCEL con
+  // error_message. Distinguirlos importa, porque decirle «cerraste la ventana»
+  // a quien tuvo un error lo manda a buscar el problema donde no está.
+  if (datos.event === 'CANCEL') {
+    var motivo = datos.data && datos.data.error_message;
+    if (motivo) {
+      estado('fallo', 'No se pudo conectar');
+      liberar('Reintentar');
+      avisar('mal', 'Meta rechazó la conexión: ' + motivo);
+    } else {
+      estado('inicio', 'Sin conectar');
+      liberar('Conectar mi WhatsApp');
+      avisar('ojo', 'Cerraste la ventana antes de terminar. Puedes intentarlo otra vez cuando quieras.');
+    }
   }
 });
 
@@ -316,15 +274,14 @@ window.addEventListener('message', function (evento) {
 function respuestaLogin(respuesta) {
   if (respuesta && respuesta.authResponse && respuesta.authResponse.code) {
     codigo = respuesta.authResponse.code;
-    programarRescate();
     enviar();
     return;
   }
   // Sin código no hay nada que canjear. Si el registro ya terminó, del aviso se
-  // encarga el rescate; si no, es que simplemente cerró la ventana.
+  // encarga el reloj; si no, es que simplemente cerró la ventana.
   if (!datosRegistro) {
     estado('inicio', 'Sin conectar');
-    permitirReintento('Conectar mi WhatsApp');
+    liberar('Conectar mi WhatsApp');
   }
 }
 
@@ -333,10 +290,10 @@ function respuestaLogin(respuesta) {
 // El código y los datos del registro llegan por caminos distintos y sin orden
 // garantizado, así que solo se envía cuando ya están los dos.
 function enviar() {
-  if (!codigo || !datosRegistro || enviado) return;
+  if (enviado || !codigo || !datosRegistro) return;
 
-  clearTimeout(rescate);
   enviado = true;
+  clearTimeout(reloj);
   estado('trabajando', 'Terminando la conexión…');
 
   fetch(URL_BACKEND, {
@@ -346,7 +303,7 @@ function enviar() {
       code: codigo,
       waba_id: datosRegistro.waba_id || null,
       phone_number_id: datosRegistro.phone_number_id || null,
-      flujo: flujoElegido()
+      invitacion: INVITACION
     })
   })
     .then(function (r) {
@@ -364,22 +321,9 @@ function enviar() {
     .catch(function () {
       enviado = false;
       estado('fallo', 'Falta un paso');
-      permitirReintento('Reintentar');
-      avisar('mal', 'Autorizaste correctamente, pero no pudimos guardar la conexión. Escríbenos y lo terminamos nosotros: no hace falta que repitas nada en Meta.');
+      liberar('Reintentar');
+      avisar('mal', 'Autorizaste correctamente, pero no pudimos guardar la conexión. Pulsa Reintentar; si vuelve a fallar, escríbenos y lo terminamos nosotros sin que repitas nada en Meta.');
     });
-}
-
-// Si una de las dos piezas no llega nunca, el panel se quedaría en "esperando"
-// con el botón desactivado y sin salida. Este temporizador es esa salida.
-function programarRescate() {
-  clearTimeout(rescate);
-  if (codigo && datosRegistro) return;
-  rescate = setTimeout(function () {
-    if (codigo && datosRegistro) return;
-    estado('fallo', 'Quedó a medias');
-    permitirReintento('Reintentar');
-    avisar('mal', 'La autorización quedó a medias y no pudimos terminarla. Vuelve a intentarlo; si se repite, escríbenos.');
-  }, 90000);
 }
 
 /* ── LANZAR EL FLUJO ────────────────────────────────────────────── */
@@ -390,24 +334,30 @@ boton.addEventListener('click', function () {
   datosRegistro = null;
   codigo = null;
   enviado = false;
-  clearTimeout(rescate);
 
   boton.disabled = true;
   estado('trabajando', 'Esperando autorización en Meta…');
 
-  var extras = {
-    setup: {},
-    sessionInfoVersion: '3'
-  };
-  if (flujoElegido() === 'coexistencia') {
-    extras.featureType = FEATURE_COEXISTENCIA;
-  }
+  // Si no llega nada, o solo una de las dos piezas, el panel se quedaría en
+  // «esperando» con el botón desactivado y sin salida. Este reloj es esa salida.
+  // Avisa de escribirnos antes de reintentar: si la autorización sí entró en
+  // Meta, un segundo intento duplicaría la conexión.
+  reloj = setTimeout(function () {
+    if (enviado) return;
+    estado('fallo', 'Quedó a medias');
+    liberar('Reintentar');
+    avisar('ojo', 'No recibimos la confirmación completa de Meta. Si ya terminaste el proceso allá, escríbenos antes de reintentar para no duplicar la conexión.');
+  }, ESPERA_MAX);
 
   FB.login(respuestaLogin, {
     config_id: ID_CONFIG,
     response_type: 'code',
     override_default_response_type: true,
-    extras: extras
+    extras: {
+      setup: {},
+      featureType: FEATURE,
+      sessionInfoVersion: '3'
+    }
   });
 });
 </script>

@@ -506,73 +506,28 @@ h1, h2, h3 {
   margin-bottom: 18px;
 }
 
-/* Elección de flujo: radios de verdad, pintados como tarjetas. Con <div> y
-   JavaScript se pierde la navegación por teclado y el lector de pantalla no
-   sabe que son opciones excluyentes. */
-.opciones {
-  display: grid;
-  gap: 12px;
-  margin: 0 0 46px;
-  padding: 0;
-  border: 0;
-}
-
-.opcion {
-  position: relative;
-  display: block;
-  background: var(--bg-card);
-  border: 1px solid var(--line);
+/* Aviso previo: lo que el cliente debe saber ANTES de pulsar el botón, no
+   después. Ámbar y no rojo porque no es un error, es una advertencia. */
+.antes-de-empezar {
+  background: #FBF4E4;
+  border: 1px solid #E8D9AE;
   border-radius: var(--radius);
-  padding: 17px 20px 17px 50px;
-  cursor: pointer;
+  padding: 18px 20px;
+  margin: 0 0 40px;
+  font-size: 0.94rem;
+  color: #6B4E0F;
 }
-.opcion:hover { border-color: var(--ink-faint); }
-.opcion:has(input:checked) {
-  border-color: var(--accent);
-  box-shadow: inset 0 0 0 1px var(--accent);
-}
-.opcion:has(input:focus-visible) {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
-.opcion input {
-  position: absolute;
-  left: 19px;
-  top: 20px;
-  width: 17px;
-  height: 17px;
-  margin: 0;
-  accent-color: var(--accent);
-}
-
-.opcion strong {
+/* Solo el hijo directo es el título del bloque: los <strong> de dentro de la
+   lista son énfasis en medio de una frase y deben quedarse en línea. */
+.antes-de-empezar > strong {
   display: block;
   font-family: 'Fraunces', Georgia, serif;
-  color: var(--brand);
   font-size: 1.02rem;
-  font-weight: 600;
-  margin-bottom: 3px;
+  margin-bottom: 8px;
 }
-.opcion span {
-  display: block;
-  color: var(--ink-soft);
-  font-size: 0.92rem;
-  line-height: 1.5;
-}
-
-.requisito {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--accent);
-  background: var(--accent-soft);
-  border-radius: 999px;
-  padding: 3px 9px;
-  margin-top: 8px;
-  display: inline-block;
-}
+.antes-de-empezar ul { margin: 0; padding-left: 1.15em; }
+.antes-de-empezar li { margin-bottom: 6px; }
+.antes-de-empezar li:last-child { margin-bottom: 0; }
 
 .nota-lateral {
   border-top: 1px solid var(--line);
@@ -665,6 +620,7 @@ h1, h2, h3 {
 .aviso:empty { display: none; }
 .aviso.mal  { background: var(--alert-soft); color: var(--alert); }
 .aviso.bien { background: var(--accent-soft); color: #0B6B47; }
+.aviso.ojo  { background: #FBF4E4; color: #6B4E0F; }
 
 .resultado {
   margin-top: 22px;
@@ -689,21 +645,6 @@ h1, h2, h3 {
     padding-bottom: 60px;
   }
   .panel { position: static; }
-}
-
-/* Visible solo para lectores de pantalla: el <legend> del grupo de opciones
-   hace falta para que se anuncie como un grupo, pero en pantalla lo dicen ya
-   el encabezado y las propias tarjetas. */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 .nota-sin-js {
