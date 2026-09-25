@@ -172,14 +172,6 @@ h1, h2, h3 {
 }
 .clause li { margin-bottom: 6px; }
 
-.fill {
-  background: var(--accent-soft);
-  color: #0B6B47;
-  padding: 0 5px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
 .callout {
   background: var(--bg-card);
   border: 1px solid var(--line);
