@@ -152,6 +152,12 @@ const FEATURE = 'whatsapp_business_app_onboarding';
 // conexión sin preguntárselo al cliente, que no sabría qué contestar.
 const INVITACION = new URLSearchParams(location.search).get('i') || null;
 
+// Filtra el ruido de bots que escanean URLs de webhooks al azar. No es un
+// secreto real: cualquiera que mire el código fuente lo ve. El mismo valor
+// va en la credencial "Header Auth" del nodo Webhook de onboarding-whatsapp.
+const CABECERA_WEBHOOK = 'x-verificame-secret';
+const TOKEN_WEBHOOK    = '0492fde8a87d5e27b188ac93840d335882babec752499536763a5934937d609a';
+
 // Origen completo, no sufijo: endsWith('facebook.com') aceptaría
 // 'https://falsofacebook.com'.
 const ORIGENES_META = [
@@ -298,7 +304,10 @@ function enviar() {
 
   fetch(URL_BACKEND, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      [CABECERA_WEBHOOK]: TOKEN_WEBHOOK
+    },
     body: JSON.stringify({
       code: codigo,
       waba_id: datosRegistro.waba_id || null,
