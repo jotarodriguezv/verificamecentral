@@ -214,7 +214,12 @@ function liberar(etiqueta) {
 /* ── SDK DE META ────────────────────────────────────────────────── */
 
 window.fbAsyncInit = function () {
-  FB.init({ appId: ID_APP, cookie: true, xfbml: false, version: VERSION });
+  // fedCM: false es obligatorio para Embedded Signup. La configuración remota
+  // del SDK puede activar FedCM sin avisar, y por esa vía FB.login solo envía
+  // `scope` y descarta config_id y response_type: no hay popup de Meta ni
+  // código, y el fallo no da ningún error claro. Fijarlo aquí evita que
+  // Meta lo reactive desde fuera.
+  FB.init({ appId: ID_APP, cookie: true, xfbml: false, version: VERSION, fedCM: false });
   liberar('Conectar mi WhatsApp');
 };
 
