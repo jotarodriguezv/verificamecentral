@@ -159,10 +159,14 @@ const CABECERA_WEBHOOK = 'x-verificame-secret';
 const TOKEN_WEBHOOK    = '0492fde8a87d5e27b188ac93840d335882babec752499536763a5934937d609a';
 
 // Origen completo, no sufijo: endsWith('facebook.com') aceptaría
-// 'https://falsofacebook.com'.
+// 'https://falsofacebook.com'. business.facebook.com se añadió porque el
+// evento de fin puede salir de ahí según el recorrido del cliente; si la
+// página lo descartara, el cliente terminaría en Meta y esta se quedaría
+// esperando sin ningún error.
 const ORIGENES_META = [
   'https://www.facebook.com',
   'https://web.facebook.com',
+  'https://business.facebook.com',
   'https://facebook.com'
 ];
 
