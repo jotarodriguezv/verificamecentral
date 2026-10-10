@@ -30,6 +30,22 @@ lugar, el CTA final usa un botón de WhatsApp (clic-to-chat) y un `mailto:`, que
 sin necesidad de servidor. Si más adelante quieres un formulario real, se puede conectar a un
 servicio externo (Formspree, o un webhook a tu propio n8n) — lo vemos cuando quieras.
 
+## Enlaces de reseña (`/r/`)
+
+`verificame.co/r/<código>` no es una página de este sitio: `nginx.conf` lo reenvía a la
+función `r` de Supabase (proyecto `verificame-core`), que es del producto V Reviews. Registra
+el clic y redirige a la página de reseñas de Google del restaurante. Este sitio sigue sin
+backend propio; si el reenvío falla, solo se caen esos enlaces, no las páginas.
+
+Después de desplegar un cambio en `nginx.conf`, comprobar que la regla funciona (con un
+código inventado debe contestar **404 «Enlace no válido»**, que viene de la función):
+
+```bash
+curl -i https://verificame.co/r/zzzzzzzzzzzz
+```
+
+Y que las páginas de siempre siguen respondiendo (`/`, `/privacidad`, `/terminos`).
+
 ## Páginas incluidas
 
 - `/` — landing
